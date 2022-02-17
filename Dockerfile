@@ -8,8 +8,8 @@ EXPOSE 9001
 #指定项webapi或mvc站点的内部启动端口，默认是80
 ENV ASPNETCORE_URLS http://+:9001
 
-#FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-#WORKDIR /src
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
 COPY . .
 
 #如果用System.SqlClient.dll访问数据库，需要加这一句
